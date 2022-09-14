@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+
+  <ItemGroup>
+        <ProjectReference Include="../todoapp.data/todoapp.data.csproj"/>
+        <ProjectReference Include="../todoapp.entity/todoapp.entity.csproj"/>
+  </ItemGroup> 
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  
+
+</Project>

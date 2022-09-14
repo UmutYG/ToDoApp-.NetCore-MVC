@@ -1,0 +1,13 @@
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.business\bin\Debug\netstandard2.0\todoapp.business.deps.json
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.business\bin\Debug\netstandard2.0\todoapp.business.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.business\bin\Debug\netstandard2.0\todoapp.business.pdb
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.business\bin\Debug\netstandard2.0\todoapp.data.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.business\bin\Debug\netstandard2.0\todoapp.entity.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.business\bin\Debug\netstandard2.0\todoapp.data.pdb
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.business\bin\Debug\netstandard2.0\todoapp.entity.pdb
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.business\obj\Debug\netstandard2.0\todoapp.business.csprojAssemblyReference.cache
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.business\obj\Debug\netstandard2.0\todoapp.business.AssemblyInfoInputs.cache
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.business\obj\Debug\netstandard2.0\todoapp.business.AssemblyInfo.cs
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.business\obj\Debug\netstandard2.0\todoapp.business.csproj.CopyComplete
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.business\obj\Debug\netstandard2.0\todoapp.business.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.business\obj\Debug\netstandard2.0\todoapp.business.pdb

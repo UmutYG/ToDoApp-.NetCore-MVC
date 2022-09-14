@@ -73,3 +73,5 @@ C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\obj\Debug\netcor
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\obj\Debug\netcoreapp3.1\todoapp.webui.csproj.CopyComplete
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\obj\Debug\netcoreapp3.1\todoapp.webui.dll
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\obj\Debug\netcoreapp3.1\todoapp.webui.pdb
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\bin\Debug\netcoreapp3.1\todoapp.business.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\bin\Debug\netcoreapp3.1\todoapp.business.pdb

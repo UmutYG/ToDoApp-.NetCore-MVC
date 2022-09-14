@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using todoapp.business.Abstract;
+using todoapp.business.Concrete;
 using todoapp.data.Abstract;
 using todoapp.data.Concrete;
 
@@ -18,6 +20,7 @@ namespace todoapp.webui
         {
             services.AddControllersWithViews();
             services.AddScoped<ITaskRepository, EfCoreTaskRepository>();
+            services.AddScoped<ITaskService, TaskManager>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

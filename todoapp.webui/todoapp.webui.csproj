@@ -8,6 +8,7 @@
   <ItemGroup>
         <ProjectReference Include="../todoapp.entity/todoapp.entity.csproj"/>
         <ProjectReference Include="../todoapp.data/todoapp.data.csproj"/>
+        <ProjectReference Include="../todoapp.business/todoapp.business.csproj"/>
   </ItemGroup> 
 
   <ItemGroup>
