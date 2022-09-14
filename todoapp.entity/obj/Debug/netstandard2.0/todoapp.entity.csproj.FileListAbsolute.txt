@@ -1,0 +1,8 @@
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.entity\bin\Debug\netstandard2.0\todoapp.entity.deps.json
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.entity\bin\Debug\netstandard2.0\todoapp.entity.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.entity\bin\Debug\netstandard2.0\todoapp.entity.pdb
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.entity\obj\Debug\netstandard2.0\todoapp.entity.csprojAssemblyReference.cache
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.entity\obj\Debug\netstandard2.0\todoapp.entity.AssemblyInfoInputs.cache
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.entity\obj\Debug\netstandard2.0\todoapp.entity.AssemblyInfo.cs
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.entity\obj\Debug\netstandard2.0\todoapp.entity.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.entity\obj\Debug\netstandard2.0\todoapp.entity.pdb

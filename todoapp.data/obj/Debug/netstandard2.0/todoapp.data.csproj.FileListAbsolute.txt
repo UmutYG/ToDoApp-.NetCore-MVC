@@ -1,0 +1,11 @@
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\bin\Debug\netstandard2.0\todoapp.data.deps.json
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\bin\Debug\netstandard2.0\todoapp.data.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\bin\Debug\netstandard2.0\todoapp.data.pdb
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\bin\Debug\netstandard2.0\todoapp.entity.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\bin\Debug\netstandard2.0\todoapp.entity.pdb
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\obj\Debug\netstandard2.0\todoapp.data.csprojAssemblyReference.cache
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\obj\Debug\netstandard2.0\todoapp.data.AssemblyInfoInputs.cache
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\obj\Debug\netstandard2.0\todoapp.data.AssemblyInfo.cs
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\obj\Debug\netstandard2.0\todoapp.data.csproj.CopyComplete
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\obj\Debug\netstandard2.0\todoapp.data.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\obj\Debug\netstandard2.0\todoapp.data.pdb

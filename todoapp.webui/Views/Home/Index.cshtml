@@ -1,0 +1,47 @@
+@model List<todoapp.entity.Task>
+
+<blockquote class="blockquote text-center">
+  <p class="mt-1" id="quote"></p>
+  <footer class="blockquote-footer mt-2" id="author"><cite title="Source Title"></cite></footer>
+</blockquote>
+  <div class="container mt-3">
+      <p class="card-text fs-4">ToDoApp</p>
+      <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Add Task" aria-label="Recipient's username" id="input">
+          <button class="btn btn-outline-secondary" onclick="manageTasks()" type="button" id="button-add">Add</button>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Add Description" aria-label="Recipient's username" id="inputDesc">
+        </div>
+        <ul class="list-group list-group-horizontal mb-3">
+          <li class="list-group-item"><a href="#">All</a></li>
+          <li class="list-group-item"><a href="#">Pending</a></li>
+          <li class="list-group-item"><a href="#">Completed</a></li>
+        </ul>
+      <div class="accordion" id="mainAccordion">
+          <!-- filled with tasks -->
+          @foreach (var task in Model)
+          {
+            <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a task.TaskId" aria-expanded="true" aria-controls="collapseOne">
+                        @task.TaskHeader
+                        </button>
+                        <div class="icons">
+                            <a href="#" onclick="editTask(@task.TaskId)"><i class="fa-solid fa-pen-to-square fa-sm"></i></a>
+                            <a href="#" onclick="deleteTask(@task.TaskId)"><i class="fa-solid fa-trash fa-sm"></i></a>
+                            <a href="#" id="status" onclick="finishTask(@task.TaskId)"><i class="${statusIcon}"></i></a>
+                            
+                        </div>
+                    </h2>
+                    <div id="a${task.id}" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          
+                        @task.Description
+                        </div>
+                    </div>
+                </div>
+          }
+      </div>
+  </div>
+ 
