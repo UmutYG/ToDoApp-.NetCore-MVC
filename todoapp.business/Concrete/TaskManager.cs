@@ -17,7 +17,7 @@ namespace todoapp.business.Concrete
         }
         public void Create(entity.Task t)
         {
-            throw new NotImplementedException();
+            _taskRepository.Create(t);
         }
 
         public void Delete(entity.Task t)
