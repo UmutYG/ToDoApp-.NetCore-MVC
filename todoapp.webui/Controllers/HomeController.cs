@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using todoapp.business.Abstract;
 using todoapp.entity;
+using todoapp.webui.Models;
 
 namespace todoapp.webui.Controllers
 {
@@ -40,6 +41,26 @@ namespace todoapp.webui.Controllers
             _taskService.Delete(task);
             
            }
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Edit(int id)
+        {
+            return View(new EditModel(){
+                Tasks = _taskService.GetAll(),
+                EditTask = _taskService.GetById(id)}
+                );
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Task t)
+        {
+            var change = _taskService.GetById(t.TaskId);
+            if(change != null)
+            {
+                _taskService.Update(t);
+                
+            }
             return RedirectToAction("Index");
         }
     }

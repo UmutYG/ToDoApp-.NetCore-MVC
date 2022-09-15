@@ -19,8 +19,15 @@ using todoapp.entity;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\Views\_ViewImports.cshtml"
+using todoapp.webui.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"207ca9375f8fc3b0241ce1228db9bbeb921f8cf5", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1d2f747331458cecc24d2b826cf7bc99119f51b3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"60faf25213ef0c9480698c0cb1c1b932c8a7af44", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

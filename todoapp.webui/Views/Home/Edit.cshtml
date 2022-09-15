@@ -1,4 +1,4 @@
-@model List<todoapp.entity.Task>
+@model EditModel
 
 <blockquote class="blockquote text-center">
   <p class="mt-1" id="quote"></p>
@@ -6,13 +6,14 @@
 </blockquote>
   <div class="container mt-3">
       <p class="card-text fs-4">ToDoApp</p>
-      <form action="/home/AddTask" method="post">
+      <form action="/home/Edit" method="post">
+      <input type="hidden" name="TaskId" value="@Model.EditTask.TaskId">
       <div class="input-group mb-3">
-          <input name="task" type="text" class="form-control" placeholder="Add Task" aria-label="Recipient's username" id="input">
-          <button type="submit" class="btn btn-outline-secondary" id="button-add">Add</button>
+          <input name="TaskHeader" type="text" value="@Model.EditTask.TaskHeader" class="form-control" placeholder="Add Task">
+          <button type="submit" class="btn btn-outline-secondary" id="button-add">Edit</button>
         </div>
         <div class="input-group mb-3">
-          <input name="desc" type="text" class="form-control" placeholder="Add Description" aria-label="Recipient's username" id="inputDesc">
+          <input name="Description" type="text" value="@Model.EditTask.Description" class="form-control" placeholder="Add Description">
         </div>
         </form>
         <ul class="list-group list-group-horizontal mb-3">
@@ -22,7 +23,7 @@
         </ul>
       <div class="accordion" id="mainAccordion">
           <!-- filled with tasks -->
-          @foreach (var task in Model)
+          @foreach (var task in Model.Tasks)
           {
             <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">

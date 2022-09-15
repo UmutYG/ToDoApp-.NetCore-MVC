@@ -38,7 +38,7 @@ namespace todoapp.business.Concrete
 
         public void Update(entity.Task t)
         {
-            throw new NotImplementedException();
+            _taskRepository.Update(t);
         }
     }
 }

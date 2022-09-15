@@ -14420,6 +14420,11 @@
       "FilePath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\Views\\Home\\Edit.cshtml",
+      "TargetPath": "Views\\Home\\Edit.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
