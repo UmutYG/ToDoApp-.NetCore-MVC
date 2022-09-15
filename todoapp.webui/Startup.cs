@@ -28,6 +28,7 @@ namespace todoapp.webui
             app.UseStaticFiles();
             if (env.IsDevelopment())
             {
+                SeedDatabase.Seed();
                 app.UseDeveloperExceptionPage();
             }
 

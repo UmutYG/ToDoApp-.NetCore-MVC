@@ -7,7 +7,7 @@ namespace todoapp.entity
 {
     public class User
     {
-        public int UserId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public List<Task> Tasks { get; set; }
     }
