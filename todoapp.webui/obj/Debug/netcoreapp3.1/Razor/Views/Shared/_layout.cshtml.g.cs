@@ -20,7 +20,7 @@ using todoapp.entity;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e79e123f814044c13af35f133cedebc9c26903b0", @"/Views/Shared/_layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"43360ee57166abe1992f1a90aa5aa115b4ed1c39", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1d2f747331458cecc24d2b826cf7bc99119f51b3", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden

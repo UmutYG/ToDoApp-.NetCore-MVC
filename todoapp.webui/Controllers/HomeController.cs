@@ -27,8 +27,19 @@ namespace todoapp.webui.Controllers
             Task add = new Task();
             add.TaskHeader = task;
             add.Description = desc;
+            add.UserId = 1;
             _taskService.Create(add);
           
+            return RedirectToAction("Index");
+        }
+        public IActionResult Delete(int id)
+        {
+           var task =  _taskService.GetById(id);
+           if(task != null)
+           {
+            _taskService.Delete(task);
+            
+           }
             return RedirectToAction("Index");
         }
     }

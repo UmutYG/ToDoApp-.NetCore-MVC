@@ -22,7 +22,8 @@ namespace todoapp.business.Concrete
 
         public void Delete(entity.Task t)
         {
-            throw new NotImplementedException();
+            _taskRepository.Delete(t);
+            
         }
 
         public List<entity.Task> GetAll()
@@ -32,7 +33,7 @@ namespace todoapp.business.Concrete
 
         public entity.Task GetById(int id)
         {
-            throw new NotImplementedException();
+            return _taskRepository.GetById(id);
         }
 
         public void Update(entity.Task t)

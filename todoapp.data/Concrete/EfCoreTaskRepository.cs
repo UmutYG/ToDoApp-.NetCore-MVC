@@ -19,7 +19,8 @@ namespace todoapp.data.Concrete
 
         public void Delete(Task t)
         {
-            throw new NotImplementedException();
+            context.Tasks.Remove(t);
+            context.SaveChanges();
         }
 
         public List<Task> GetAll()

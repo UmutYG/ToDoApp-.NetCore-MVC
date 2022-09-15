@@ -9,7 +9,7 @@
       <form action="/home/AddTask" method="post">
       <div class="input-group mb-3">
           <input name="task" type="text" class="form-control" placeholder="Add Task" aria-label="Recipient's username" id="input">
-          <button type="submit" class="btn btn-outline-secondary" onclick="manageTasks()" type="button" id="button-add">Add</button>
+          <button type="submit" class="btn btn-outline-secondary" id="button-add">Add</button>
         </div>
         <div class="input-group mb-3">
           <input name="desc" type="text" class="form-control" placeholder="Add Description" aria-label="Recipient's username" id="inputDesc">
@@ -31,7 +31,7 @@
                         </button>
                         <div class="icons">
                             <a href="#" onclick="editTask(@task.TaskId)"><i class="fa-solid fa-pen-to-square fa-sm"></i></a>
-                            <a href="#" onclick="deleteTask(@task.TaskId)"><i class="fa-solid fa-trash fa-sm"></i></a>
+                            <a asp-controller="Home" asp-action="Delete" asp-route-id="@task.TaskId"><i class="fa-solid fa-trash fa-sm"></i></a>
                             <a href="#" id="status" onclick="finishTask(@task.TaskId)"><i class="${statusIcon}"></i></a>
                             
                         </div>
