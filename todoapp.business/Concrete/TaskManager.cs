@@ -36,6 +36,11 @@ namespace todoapp.business.Concrete
             return _taskRepository.GetById(id);
         }
 
+        public List<entity.Task> GetByStatus(bool status)
+        {
+            return _taskRepository.GetByStatus(status);
+        }
+
         public void Update(entity.Task t)
         {
             _taskRepository.Update(t);

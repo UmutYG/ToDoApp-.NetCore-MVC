@@ -17,9 +17,16 @@ namespace todoapp.webui.Controllers
         {
             _taskService = taskService;
         }
-        public IActionResult Index()
+        public IActionResult Index(string status)
         {
+            if(status == "pending")
+            {
+                return View(_taskService.GetByStatus(false));
 
+            }
+            else if(status == "completed"){
+                return View(_taskService.GetByStatus(true));
+            }
             return View(_taskService.GetAll());
         }
 

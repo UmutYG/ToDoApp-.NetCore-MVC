@@ -38,7 +38,7 @@ namespace todoapp.webui
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}"
+                    pattern: "{controller=Home}/{action=Index}/{status?}"
                 );
             });
         }

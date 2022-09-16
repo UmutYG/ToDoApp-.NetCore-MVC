@@ -33,6 +33,12 @@ namespace todoapp.data.Concrete
             return context.Tasks.Find(id);
         }
 
+        public List<Task> GetByStatus(bool status)
+        {
+            return context.Tasks.Where(t=>t.isCompleted == status)
+                                .ToList();
+        }
+
         public void Update(Task t)
         {
             var entity = context.Tasks.Find(t.TaskId);
