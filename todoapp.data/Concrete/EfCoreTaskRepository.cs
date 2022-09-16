@@ -36,10 +36,9 @@ namespace todoapp.data.Concrete
         public void Update(Task t)
         {
             var entity = context.Tasks.Find(t.TaskId);
-            Console.WriteLine(entity.Description + "  değiş  " + t.Description);
             entity.Description = t.Description;
             entity.TaskHeader = t.TaskHeader;
-            entity.isCompleted = false;
+            entity.isCompleted = t.isCompleted;
             context.SaveChanges();
           
         }

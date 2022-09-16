@@ -63,5 +63,16 @@ namespace todoapp.webui.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        public IActionResult Check(int id)
+        {
+            var checkTask = _taskService.GetById(id);
+            if(checkTask != null)
+            {
+                checkTask.isCompleted = checkTask.isCompleted ? false : true;
+                _taskService.Update(checkTask);
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

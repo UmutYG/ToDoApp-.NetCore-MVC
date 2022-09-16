@@ -9,12 +9,18 @@
         }
         .icons
         {
-            margin-left: 20px;
+            margin-left: 15px;
+            width: 140px;
         }
 
         .icons i {
-            margin-left: 5px;
+            margin-left: 4px;
             color: gray;
+            font-size: 30px;
+        }
+
+        .icons a {
+            width: 30px;
         }
 
 
