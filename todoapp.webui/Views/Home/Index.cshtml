@@ -28,11 +28,12 @@
                     <h2 class="accordion-header" id="headingOne">
                         <button class='accordion-button collapsed @(task.isCompleted ? "done" : "")' type="button"
                          data-bs-toggle="collapse" data-bs-target="#a@(task.TaskId)"
-                         aria-expanded="false" aria-controls="a@(task.TaskId)">
+                         aria-expanded="false" aria-controls="a@(task.TaskId)"
+                         onclick="drawBorder(this)">
                         @task.TaskHeader
                         </button>
                         <div class="icons">
-                            <a asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId"><i class="fa-solid fa-pen-to-square fa-sm"></i></a>
+                            <a asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId"><i class="fa-solid fa-pen-to-square fa-sm "></i></a>
                             <a asp-controller="Home" asp-action="Delete" asp-route-id="@task.TaskId"><i class="fa-solid fa-trash fa-sm"></i></a>
                             <a asp-controller="Home" asp-action="Check" asp-route-id="@task.TaskId" id="status"><i class='@(task.isCompleted ? "fa-solid fa-rotate-left": "fa-solid fa-check")'></i></a>
                         </div>

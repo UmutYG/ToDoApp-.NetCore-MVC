@@ -9,18 +9,31 @@
         }
         .icons
         {
-            margin-left: 15px;
+           
             width: 140px;
+            height: 52px;
+            align-items: center;
+            justify-content: center;
+           
+            
+        }
+
+        .bordered
+        {
+            border-bottom: 1px solid #DEE2E6;
         }
 
         .icons i {
-            margin-left: 4px;
+         
             color: gray;
             font-size: 30px;
+            margin-top: 10px;
+            
         }
 
         .icons a {
             width: 30px;
+            margin-left: 10px;
         }
 
 
