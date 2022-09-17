@@ -19,15 +19,21 @@ namespace todoapp.webui.Controllers
         }
         public IActionResult Index(string status,int currentPage=1)
         {
-           
             const int pageSize = 3;
             if(status == "pending")
             {
-                return View(_taskService.GetByStatus(false));
-
+                return View(new PaginationModel()
+                    {
+                        Tasks = _taskService.GetByStatus(false),
+                        PageInfo = new PageInfo()
+                    });
             }
             else if(status == "completed"){
-                return View(_taskService.GetByStatus(true));
+                return View(new PaginationModel()
+                    {
+                        Tasks = _taskService.GetByStatus(true),
+                        PageInfo = new PageInfo()
+                    });
             }
             Console.WriteLine(Math.Ceiling((float)_taskService.GetAll().Count() / pageSize));
             return View(new PaginationModel(){
