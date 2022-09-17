@@ -23,9 +23,15 @@ namespace todoapp.data.Concrete
             context.SaveChanges();
         }
 
+
         public List<Task> GetAll()
         {
             return context.Tasks.ToList();
+        }
+
+        public List<Task> GetAllByPagination(int page, int pageSize)
+        {
+            return context.Tasks.Skip((page-1) * pageSize).Take(pageSize).ToList();
         }
 
         public Task GetById(int id)

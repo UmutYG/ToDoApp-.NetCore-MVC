@@ -17,8 +17,10 @@ namespace todoapp.webui.Controllers
         {
             _taskService = taskService;
         }
-        public IActionResult Index(string status)
+        public IActionResult Index(string status,int currentPage=1)
         {
+           
+            const int pageSize = 3;
             if(status == "pending")
             {
                 return View(_taskService.GetByStatus(false));
@@ -27,7 +29,13 @@ namespace todoapp.webui.Controllers
             else if(status == "completed"){
                 return View(_taskService.GetByStatus(true));
             }
-            return View(_taskService.GetAll());
+            Console.WriteLine(Math.Ceiling((float)_taskService.GetAll().Count() / pageSize));
+            return View(new PaginationModel(){
+                PageInfo = new PageInfo(){
+                    TotalPage = (int)Math.Ceiling(((float)_taskService.GetAll().Count() / pageSize)),
+                    CurrentPage = currentPage},
+                    Tasks = _taskService.GetAllByPagination(currentPage,pageSize)
+                });
         }
 
         public IActionResult AddTask(string task, string desc)
@@ -51,7 +59,7 @@ namespace todoapp.webui.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Edit(int id)
+        public IActionResult Edit(int id,int p)
         {
             return View(new EditModel(){
                 Tasks = _taskService.GetAll(),
