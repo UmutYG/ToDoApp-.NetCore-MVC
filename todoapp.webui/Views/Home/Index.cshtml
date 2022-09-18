@@ -7,13 +7,14 @@
   <div class="container mt-3">
       <p class="card-text fs-4">ToDoApp</p>
       <form action="/home/AddTask" method="post">
-      <div class="input-group mb-3">
-          <input name="task" type="text" class="form-control" placeholder="Add Task">
-          <button type="submit" class="btn btn-outline-secondary" id="button-add">Add</button>
-        </div>
+        <div asp-validation-summary="All" class="text-danger"></div>
         <div class="input-group mb-3">
-          <input name="desc" type="text" class="form-control" placeholder="Add Description">
-        </div>
+            <input asp-for="TaskHeader" class="form-control" placeholder="Add Task" >
+            <button type="submit" class="btn btn-outline-secondary" id="button-add">Add</button>
+          </div>
+          <div class="input-group mb-3">
+            <input asp-for="Description" class="form-control" placeholder="Add Description" value="@Model.Description">
+          </div>
         </form>
         <ul class="list-group list-group-horizontal mb-3">
           <li class="list-group-item"><a  href="/all">All</a></li>
