@@ -11,7 +11,6 @@ namespace todoapp.entity
         public string TaskHeader { get; set; }
         public string Description { get; set; }
         public bool isCompleted { get; set; }
-        public User user { get; set; }
         public int UserId { get; set; }
     }
 }

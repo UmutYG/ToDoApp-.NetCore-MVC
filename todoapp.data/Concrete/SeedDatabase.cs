@@ -14,11 +14,7 @@ namespace todoapp.data.Concrete
         {
             if(db.Database.GetPendingMigrations().Count() == 0)
             {
-                if(db.Users.Count()==0)
-                {
-                    db.Users.AddRange(users);
-                }
-
+               
                 if(db.Tasks.Count() == 0)
                 {
                     db.Tasks.AddRange(tasks);
@@ -34,11 +30,7 @@ namespace todoapp.data.Concrete
             new Task(){TaskHeader = "SeededTask2", Description="Task2 Seed",isCompleted=false,UserId=1}
         };
         // Used List for example.
-        private static List<User> users = new List<User>() {
-            new User(){Name="Umut",Id=1},
-            new User(){Name="Batu",Id=2},
-            new User(){Name="Salih",Id=3}
-        };
+       
 
     }
 }

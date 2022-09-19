@@ -78,3 +78,8 @@ C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\bin\Debug\netcor
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\obj\Debug\netcoreapp3.1\Razor\Views\Home\Edit.cshtml.g.cs
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\bin\Debug\netcoreapp3.1\package-lock.json
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\bin\Debug\netcoreapp3.1\package.json
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

@@ -9,7 +9,6 @@ namespace todoapp.data.Concrete
     public class TaskContext : DbContext
     {
         public DbSet<Task> Tasks { get; set; }
-        public DbSet<User> Users { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
