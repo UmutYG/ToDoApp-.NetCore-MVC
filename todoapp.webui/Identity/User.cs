@@ -9,6 +9,6 @@ namespace todoapp.webui.Identity
 {
     public class User : IdentityUser
     {
-        public List<Task> Tasks {get; set;}
+       
     }
 }

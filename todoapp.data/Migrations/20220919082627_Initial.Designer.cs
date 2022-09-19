@@ -8,7 +8,7 @@ using todoapp.data.Concrete;
 namespace todoapp.data.Migrations
 {
     [DbContext(typeof(TaskContext))]
-    [Migration("20220915071343_Initial")]
+    [Migration("20220919082627_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,32 +37,7 @@ namespace todoapp.data.Migrations
 
                     b.HasKey("TaskId");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("Tasks");
-                });
-
-            modelBuilder.Entity("todoapp.entity.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("todoapp.entity.Task", b =>
-                {
-                    b.HasOne("todoapp.entity.User", "user")
-                        .WithMany("Tasks")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -152,29 +152,6 @@ namespace todoapp.webui.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Task",
-                columns: table => new
-                {
-                    TaskId = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    TaskHeader = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true),
-                    isCompleted = table.Column<bool>(nullable: false),
-                    UserId = table.Column<int>(nullable: false),
-                    UserId1 = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Task", x => x.TaskId);
-                    table.ForeignKey(
-                        name: "FK_Task_AspNetUsers_UserId1",
-                        column: x => x.UserId1,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -211,11 +188,6 @@ namespace todoapp.webui.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Task_UserId1",
-                table: "Task",
-                column: "UserId1");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -234,9 +206,6 @@ namespace todoapp.webui.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
-
-            migrationBuilder.DropTable(
-                name: "Task");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

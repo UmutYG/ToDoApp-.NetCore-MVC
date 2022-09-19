@@ -9,7 +9,7 @@ using todoapp.webui.Identity;
 namespace todoapp.webui.Migrations
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20220919060958_IdentityUpdate")]
+    [Migration("20220919082530_IdentityUpdate")]
     partial class IdentityUpdate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -146,34 +146,6 @@ namespace todoapp.webui.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("todoapp.entity.Task", b =>
-                {
-                    b.Property<int>("TaskId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TaskHeader")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("UserId1")
-                        .HasColumnType("TEXT");
-
-                    b.Property<bool>("isCompleted")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("TaskId");
-
-                    b.HasIndex("UserId1");
-
-                    b.ToTable("Task");
-                });
-
             modelBuilder.Entity("todoapp.webui.Identity.User", b =>
                 {
                     b.Property<string>("Id")
@@ -287,13 +259,6 @@ namespace todoapp.webui.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("todoapp.entity.Task", b =>
-                {
-                    b.HasOne("todoapp.webui.Identity.User", null)
-                        .WithMany("Tasks")
-                        .HasForeignKey("UserId1");
                 });
 #pragma warning restore 612, 618
         }
