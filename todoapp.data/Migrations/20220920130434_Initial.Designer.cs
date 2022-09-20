@@ -8,7 +8,7 @@ using todoapp.data.Concrete;
 namespace todoapp.data.Migrations
 {
     [DbContext(typeof(TaskContext))]
-    [Migration("20220919082627_Initial")]
+    [Migration("20220920130434_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,8 +29,8 @@ namespace todoapp.data.Migrations
                     b.Property<string>("TaskHeader")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
 
                     b.Property<bool>("isCompleted")
                         .HasColumnType("INTEGER");

@@ -11,7 +11,7 @@ namespace todoapp.business.Abstract
     {
         Task GetById(int id);
         List<Task> GetAll();
-        List<Task> GetAllByPagination(int page, int pageSize);
+        List<Task> GetAllByPagination(int page, int pageSize,string userId);
         List<Task> GetByStatus(bool status);
         void Create(Task t);
         void Update(Task t);

@@ -14417,6 +14417,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\Views\\Shared\\_accountControl.cshtml",
+      "TargetPath": "Views\\Shared\\_accountControl.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"

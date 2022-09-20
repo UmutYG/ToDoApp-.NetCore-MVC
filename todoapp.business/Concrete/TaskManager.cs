@@ -31,9 +31,9 @@ namespace todoapp.business.Concrete
             return _taskRepository.GetAll();
         }
 
-        public List<entity.Task> GetAllByPagination(int page, int pageSize)
+        public List<entity.Task> GetAllByPagination(int page, int pageSize,string userId)
         {
-            return _taskRepository.GetAllByPagination(page,pageSize);
+            return _taskRepository.GetAllByPagination(page,pageSize,userId);
         }
 
         public entity.Task GetById(int id)

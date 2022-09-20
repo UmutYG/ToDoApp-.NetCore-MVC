@@ -27,8 +27,8 @@ namespace todoapp.data.Migrations
                     b.Property<string>("TaskHeader")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
 
                     b.Property<bool>("isCompleted")
                         .HasColumnType("INTEGER");

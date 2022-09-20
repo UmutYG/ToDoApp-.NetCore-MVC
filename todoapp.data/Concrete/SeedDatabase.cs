@@ -25,9 +25,9 @@ namespace todoapp.data.Concrete
         }
         //Used array for example.
         private static Task[] tasks = {
-            new Task(){TaskHeader = "SeededTask1", Description="Task1 Seed",isCompleted=false,UserId=1},
-            new Task(){TaskHeader = "SeededTask2", Description="Task2 Seed",isCompleted=false,UserId=1},
-            new Task(){TaskHeader = "SeededTask2", Description="Task2 Seed",isCompleted=false,UserId=1}
+            new Task(){TaskHeader = "SeededTask1", Description="Task1 Seed",isCompleted=false,UserId="1"},
+            new Task(){TaskHeader = "SeededTask2", Description="Task2 Seed",isCompleted=false,UserId="1"},
+            new Task(){TaskHeader = "SeededTask2", Description="Task2 Seed",isCompleted=false,UserId="1"}
         };
         // Used List for example.
        

@@ -72,7 +72,7 @@ namespace todoapp.webui
             if (env.IsDevelopment())
             {
                 // Seeding
-                SeedDatabase.Seed();
+                //SeedDatabase.Seed();
                 app.UseDeveloperExceptionPage();
             }
 

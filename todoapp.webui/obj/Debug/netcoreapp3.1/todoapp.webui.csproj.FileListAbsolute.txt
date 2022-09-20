@@ -83,3 +83,4 @@ C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\bin\Debug\netcor
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_accountControl.cshtml.g.cs

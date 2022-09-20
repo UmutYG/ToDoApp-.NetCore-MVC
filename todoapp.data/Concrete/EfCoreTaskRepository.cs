@@ -29,9 +29,10 @@ namespace todoapp.data.Concrete
             return context.Tasks.ToList();
         }
 
-        public List<Task> GetAllByPagination(int page, int pageSize)
+        public List<Task> GetAllByPagination(int page, int pageSize, string userId)
         {
-            return context.Tasks.Skip((page-1) * pageSize).Take(pageSize).ToList();
+            return context.Tasks.
+            Where(t=>t.UserId == userId).Skip((page-1) * pageSize).Take(pageSize).ToList();
         }
 
         public Task GetById(int id)

@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Identity;
 //using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using todoapp.business.Abstract;
 using todoapp.entity;
+using todoapp.webui.Identity;
 using todoapp.webui.Models;
 
 namespace todoapp.webui.Controllers
@@ -13,14 +15,21 @@ namespace todoapp.webui.Controllers
     public class HomeController : Controller
     {
         private ITaskService _taskService;
-        public HomeController(ITaskService taskService)
+        private UserManager<User> _userManager;
+        public HomeController(ITaskService taskService, UserManager<User> userManager)
         {
             _taskService = taskService;
-        }
-        public IActionResult Index(string status,int currentPage=1)
+            _userManager = userManager;
+        }   
+        public async System.Threading.Tasks.Task<IActionResult> Index(string status,int currentPage=1)
         {
+
             const int pageSize = 10;
-            if(status == "pending")
+
+            if(User.Identity.IsAuthenticated){
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+                if(status == "pending")
             {
                 return View(new HomePageModel()
                     {
@@ -39,20 +48,24 @@ namespace todoapp.webui.Controllers
                 PageInfo = new PageInfo(){
                     TotalPage = (int)Math.Ceiling(((float)_taskService.GetAll().Count() / pageSize)),
                     CurrentPage = currentPage},
-                    Tasks = _taskService.GetAllByPagination(currentPage,pageSize)
+                    Tasks = _taskService.GetAllByPagination(currentPage,pageSize,user.Id)
                 });
+            }
+            return View(new HomePageModel(){Tasks = new List<Task>(), PageInfo = new PageInfo()});
+            
         }
         [HttpPost]
-        public IActionResult AddTask(HomePageModel model)
+        public async System.Threading.Tasks.Task<IActionResult> AddTask(HomePageModel model)
         {
             if(!ModelState.IsValid)
             {
                 return RedirectToAction("Index");
             }
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
             Task add = new Task();
             add.TaskHeader = model.TaskHeader;
             add.Description = model.Description;
-            add.UserId = 1;
+            add.UserId = user.Id;
             _taskService.Create(add);
             
             return RedirectToAction("Index");

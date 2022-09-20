@@ -15,7 +15,7 @@ namespace todoapp.data.Migrations
                     TaskHeader = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
                     isCompleted = table.Column<bool>(nullable: false),
-                    UserId = table.Column<int>(nullable: false)
+                    UserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

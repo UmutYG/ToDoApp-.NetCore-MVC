@@ -9,8 +9,8 @@ using todoapp.webui.Identity;
 namespace todoapp.webui.Migrations
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20220919082530_IdentityUpdate")]
-    partial class IdentityUpdate
+    [Migration("20220920130558_initial2")]
+    partial class initial2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
