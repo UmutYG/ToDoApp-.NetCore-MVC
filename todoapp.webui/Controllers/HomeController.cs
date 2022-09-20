@@ -22,20 +22,20 @@ namespace todoapp.webui.Controllers
             const int pageSize = 10;
             if(status == "pending")
             {
-                return View(new PaginationModel()
+                return View(new HomePageModel()
                     {
                         Tasks = _taskService.GetByStatus(false),
                         PageInfo = new PageInfo()
                     });
             }
             else if(status == "completed"){
-                return View(new PaginationModel()
+                return View(new HomePageModel()
                     {
                         Tasks = _taskService.GetByStatus(true),
                         PageInfo = new PageInfo()
                     });
             }
-            return View(new PaginationModel(){
+            return View(new HomePageModel(){
                 PageInfo = new PageInfo(){
                     TotalPage = (int)Math.Ceiling(((float)_taskService.GetAll().Count() / pageSize)),
                     CurrentPage = currentPage},
@@ -43,7 +43,7 @@ namespace todoapp.webui.Controllers
                 });
         }
         [HttpPost]
-        public IActionResult AddTask(PaginationModel model)
+        public IActionResult AddTask(HomePageModel model)
         {
             if(!ModelState.IsValid)
             {

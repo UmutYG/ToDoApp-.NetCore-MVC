@@ -1,19 +1,28 @@
-@model PaginationModel
+@model HomePageModel
 
 <blockquote class="blockquote text-center">
   <p class="mt-1" id="quote"></p>
   <footer class="blockquote-footer mt-2" id="author"><cite title="Source Title"></cite></footer>
 </blockquote>
   <div class="container mt-3">
-      <p class="card-text fs-4">ToDoApp</p>
+    <div class=" d-flex justify-content-between align-items-center">
+      <p class="card-text fs-4">ToDoApp
+        @if(User.Identity.IsAuthenticated)
+        {
+          <span> - @User.Identity.Name</span>
+        }
+      </p>
+      <a href="/account/logout" class="btn btn-primary">Logout</a>
+      </div>
+     
       <form action="/home/AddTask" method="post">
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="input-group mb-3">
-            <input asp-for="TaskHeader" class="form-control" placeholder="Add Task" >
+            <input class="form-control" placeholder="Add Task" type="text" data-val="true" data-val-required="Please Fill The Task" id="TaskHeader" name="TaskHeader" value="">
             <button type="submit" class="btn btn-outline-secondary" id="button-add">Add</button>
           </div>
           <div class="input-group mb-3">
-            <input asp-for="Description" class="form-control" placeholder="Add Description" value="@Model.Description">
+            <input class="form-control" placeholder="Add Description" value="" type="text" data-val="true" data-val-required="Please Fill The Description" id="Description" name="Description">
           </div>
         </form>
         <ul class="list-group list-group-horizontal mb-3">
@@ -64,15 +73,16 @@
   Have an account? Log In.
 </div> 
 <div class="container d-flex justify-content-center">
-  <form action="/account/register" id="form">
+  <form action="/account/login" id="form" method="post">
+    <div asp-validation-summary="All"></div>
     <div class="mb-3" style="width: 300px; ">
       <label for="exampleInputEmail1" class="form-label">UserName</label>
-      <input type="text" class="form-control" name="username">
+      <input name="UserName" class="form-control">
       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
     <div class="mb-3" style="width: 300px;">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" name="password">
+      <label for="" class="form-label">Password</label>
+      <input name="password" class="form-control">
     </div>
     <div class="mb-3 form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1">

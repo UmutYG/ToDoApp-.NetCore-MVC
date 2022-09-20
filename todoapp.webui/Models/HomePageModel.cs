@@ -7,18 +7,14 @@ using todoapp.entity;
 
 namespace todoapp.webui.Models
 {
+    
 
-    public class PaginationModel
+    public class HomePageModel
     {
+        public string TaskHeader { get; set; }
+        public string Description { get; set; }
         public List<Task> Tasks { get; set; }
         public PageInfo PageInfo { get; set; }
-
-        [Required(ErrorMessage = "Please Fill The Task")]
-        public string TaskHeader { get; set; }
-
-        [Required(ErrorMessage = "Please Fill The Description")]
-        public string Description { get; set; }
-      
     }
 
     public class PageInfo

@@ -35,7 +35,7 @@ namespace todoapp.webui
 
                 // Lockout
                 options.Lockout.MaxFailedAccessAttempts = 3;
-                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromDays(1);
                 options.Lockout.AllowedForNewUsers = true; // make lockout active
 
                 // User
@@ -49,7 +49,7 @@ namespace todoapp.webui
             services.ConfigureApplicationCookie(options => {
                 options.LoginPath = "/account/login"; // If there is no cookie
                 options.LogoutPath = "/account/logout";
-                options.AccessDeniedPath = "account/accessdenied";
+                options.AccessDeniedPath = "/account/accessdenied";
                 options.SlidingExpiration = true;
                 options.ExpireTimeSpan = TimeSpan.FromDays(5);
                 options.Cookie = new CookieBuilder
@@ -78,6 +78,7 @@ namespace todoapp.webui
 
             app.UseRouting();
 
+            app.UseAuthentication(); // Don't forget that.
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

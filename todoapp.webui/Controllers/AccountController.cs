@@ -19,7 +19,7 @@ namespace todoapp.webui.Controllers
             _userManager = userManager;
             _signInManager = signInManager;
         }
-        // [HttpPost]
+        [HttpPost]
         public async Task<IActionResult> Register(LoginModel model)
         {
             if(!ModelState.IsValid)
@@ -33,7 +33,36 @@ namespace todoapp.webui.Controllers
             {
             return RedirectToAction("Index","Home");
             }
+            
             return RedirectToAction("Index","Home");
+        }
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginModel model)
+        {
+            if(!ModelState.IsValid)
+            {
+                return RedirectToAction("Index","Home");
+            }
+            var user = _userManager.FindByNameAsync(model.UserName);
+            if(user == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, false, false);
+            if(result.Succeeded)
+            {
+                System.Console.WriteLine("girdim");
+                return RedirectToAction("Index", "Home");
+            }
+            ModelState.AddModelError("", "Wrong username or password.");
+            return RedirectToAction("Index", "Home");
+        }
+
+
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return Redirect("~/");
         }
 
        
