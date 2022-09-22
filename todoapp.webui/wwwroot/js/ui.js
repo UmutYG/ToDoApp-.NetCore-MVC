@@ -37,101 +37,25 @@ function renderTasks(filter)
                     </div>
                 </div>
                 `
+            
         }
         
     }
     accordion.insertAdjacentHTML("beforeend", rendererHtml);
 }
-// Done.
+
+
 function clearInputs()
 {
     taskHeader.value = "";
     taskDescription.value = "";
 }
-// All Works.
-function manageTasks()
+
+function drawBorder(taskDiv)
 {
-   
-    if(managerButton.textContent == "Edit")
+    if(!taskDiv.classList.contains("collapsed"))
     {
-        let onEditingTask = ToDoS.find(toDo=>toDo.id == editingId);
-        onEditingTask.description = taskDescription.value;
-        onEditingTask.task = taskHeader.value;
+        taskDiv.nextElementSibling.classList.add("bordered");
     }
-    else
-    {
-        
-        if(taskHeader.value.length != 0 && taskDescription.value.length != 0)
-        {
-            ToDoS.push({"id" : ToDoS.length + 1, "task":taskHeader.value, "completed":"pending", "description":taskDescription.value});
-            document.querySelector("#form-controls").innerHTML = "";
-            
-        }
-       
-    }
-    clearInputs();
-    managerButton.textContent = "Add";
-    localStorage.setItem("ToDoS",JSON.stringify(ToDoS));
-    renderTasks("all");
+    
 }
-
-// Done.
-function editTask(taskId)
-{
-    let editTask;
-    managerButton.textContent = "Edit";
-    for(let task of ToDoS)
-    {
-        if (task.id == taskId)
-        {
-            editTask = task;
-            break;
-        }
-            
-    }
-    taskHeader.value = editTask.task;
-    taskDescription.value = editTask.description;
-    editingId = taskId;
-   
-}
-
-// Done.
-function deleteTask(taskId)
-{
-    ToDoS.splice(ToDoS.findIndex(i=>i.id == taskId),1);
-    localStorage.setItem("ToDoS",JSON.stringify(ToDoS));
-    renderTasks("all");
-}
-
-
-function finishTask(taskId)
-{
-    let task = ToDoS.find(i=>i.id == taskId);
-    task.completed == "pending" ? task.completed = "completed" : task.completed = "pending";
-    localStorage.setItem("ToDoS",JSON.stringify(ToDoS));
-    renderTasks("all");
-
-}
-
-
-const filters = document.querySelector(".list-group");
-for(let filter of filters.children)
-{   
-    filter.addEventListener("click", function(){
-        renderTasks(filter.innerText.toLowerCase())
-    });
-}
-
-
-if(localStorage.getItem("ToDoS") != null)
-{
-    ToDoS = JSON.parse(localStorage.getItem("ToDoS"));
-}
-
-
-
-
-
-
-
-

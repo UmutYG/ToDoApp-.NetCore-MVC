@@ -59,6 +59,8 @@ namespace todoapp.webui.Controllers
         {
             if(User.Identity.IsAuthenticated)
             {
+            System.Console.WriteLine("helloo1");
+
                 if(!ModelState.IsValid)
                 {
                     return RedirectToAction("Index");
@@ -71,6 +73,7 @@ namespace todoapp.webui.Controllers
                 _taskService.Create(add);  
                 
             }
+          
             return RedirectToAction("Index");
            
         }

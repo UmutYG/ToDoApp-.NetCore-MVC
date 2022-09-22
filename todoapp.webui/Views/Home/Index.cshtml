@@ -6,7 +6,7 @@
 </blockquote>
   <div class="container mt-3">
     <div class=" d-flex justify-content-between align-items-center">
-      <p class="card-text fs-4">ToDoApp
+      <p class="card-text fs-4" id="logged">ToDoApp
         @if(User.Identity.IsAuthenticated)
         {
           <span> - @User.Identity.Name</span>
@@ -15,7 +15,7 @@
       <a href="/account/logout" class="btn btn-primary">Logout</a>
       </div>
      
-      <form action="/home/AddTask" method="post">
+      <form action="/home/AddTask" method="post" id="submit-form">
         <div asp-validation-summary="All" id="form-controls" class="text-danger"></div>
         <div class="input-group mb-3">
             <input class="form-control" placeholder="Add Task" type="text" data-val="true" data-val-required="Please Fill The Task" id="TaskHeader" name="TaskHeader" value="">
