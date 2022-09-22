@@ -16,19 +16,19 @@
       </div>
      
       <form action="/home/AddTask" method="post">
-        <div asp-validation-summary="All" class="text-danger"></div>
+        <div asp-validation-summary="All" id="form-controls" class="text-danger"></div>
         <div class="input-group mb-3">
             <input class="form-control" placeholder="Add Task" type="text" data-val="true" data-val-required="Please Fill The Task" id="TaskHeader" name="TaskHeader" value="">
-            <button type="submit" class="btn btn-outline-secondary" id="button-add">Add</button>
+            <button type="submit" class="btn btn-outline-secondary" id="button-add" onclick='@(User.Identity.IsAuthenticated ? "" : "manageTasks()")'>Add</button>
           </div>
           <div class="input-group mb-3">
             <input class="form-control" placeholder="Add Description" value="" type="text" data-val="true" data-val-required="Please Fill The Description" id="Description" name="Description">
           </div>
         </form>
         <ul class="list-group list-group-horizontal mb-3">
-          <li class="list-group-item"><a  href="/all">All</a></li>
-          <li class="list-group-item"><a href="/pending">Pending</a></li>
-          <li class="list-group-item"><a href="/completed">Completed</a></li>
+          <li class="list-group-item" onclick='@(User.Identity.IsAuthenticated ? "" : "renderTasks('all')")'><a  href="/all">All</a></li>
+          <li class="list-group-item" onclick='@(User.Identity.IsAuthenticated ? "" : "renderTasks('pending')")'><a href="/pending">Pending</a></li>
+          <li class="list-group-item" onclick='@(User.Identity.IsAuthenticated ? "" : "renderTasks('completed')")'><a href="/completed">Completed</a></li>
         </ul>
       <div class="accordion" id="mainAccordion">
           <!-- filled with tasks -->
@@ -43,7 +43,7 @@
                         @task.TaskHeader
                         </button>
                         <div class="icons">
-                            <a asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId"><i class="fa-solid fa-pen-to-square fa-sm "></i></a>
+                            <a asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId" ><i class="fa-solid fa-pen-to-square fa-sm "></i></a>
                             <a asp-controller="Home" asp-action="Delete" asp-route-id="@task.TaskId"><i class="fa-solid fa-trash fa-sm"></i></a>
                             <a asp-controller="Home" asp-action="Check" asp-route-id="@task.TaskId" id="status"><i class='@(task.isCompleted ? "fa-solid fa-rotate-left": "fa-solid fa-check")'></i></a>
                         </div>

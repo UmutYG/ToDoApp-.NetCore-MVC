@@ -1,11 +1,6 @@
 const request = new XMLHttpRequest();
 request.open("GET",'https://programming-quotes-api.herokuapp.com/quotes/random');
 request.send();
-const quoteText = document.querySelector("#quote");
-const collapseHeaders = document.querySelectorAll(".accordion button");
-const accountControl = document.querySelector("#register");
-const form = document.querySelector("#form");
-const alert = document.getElementById("alert");
 
 // callback
 request.addEventListener('load', ()=>{
@@ -32,6 +27,8 @@ accountControl.addEventListener("click", ()=>{
     console.log(form);
     
 });
+
+renderTasks("all");
 
 
 

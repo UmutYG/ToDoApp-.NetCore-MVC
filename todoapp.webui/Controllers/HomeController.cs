@@ -57,18 +57,22 @@ namespace todoapp.webui.Controllers
         [HttpPost]
         public async System.Threading.Tasks.Task<IActionResult> AddTask(HomePageModel model)
         {
-            if(!ModelState.IsValid)
+            if(User.Identity.IsAuthenticated)
             {
-                return RedirectToAction("Index");
+                if(!ModelState.IsValid)
+                {
+                    return RedirectToAction("Index");
+                }
+                var user = await _userManager.FindByNameAsync(User.Identity.Name);
+                Task add = new Task();
+                add.TaskHeader = model.TaskHeader;
+                add.Description = model.Description;
+                add.UserId = user.Id;
+                _taskService.Create(add);  
+                
             }
-            var user = await _userManager.FindByNameAsync(User.Identity.Name);
-            Task add = new Task();
-            add.TaskHeader = model.TaskHeader;
-            add.Description = model.Description;
-            add.UserId = user.Id;
-            _taskService.Create(add);
-            
             return RedirectToAction("Index");
+           
         }
         public IActionResult Delete(int id)
         {

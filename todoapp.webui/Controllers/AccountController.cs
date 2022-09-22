@@ -51,7 +51,6 @@ namespace todoapp.webui.Controllers
             var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, false, false);
             if(result.Succeeded)
             {
-                System.Console.WriteLine("girdim");
                 return RedirectToAction("Index", "Home");
             }
             ModelState.AddModelError("", "Wrong username or password.");

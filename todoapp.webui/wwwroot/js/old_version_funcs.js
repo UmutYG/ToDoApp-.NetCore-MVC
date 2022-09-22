@@ -1,7 +1,3 @@
-
-// THIS SCRIPT WON'T BE USED FOR NEXT VERSIONS.
-
-
 function renderTasks(filter)
 {
     accordion.innerHTML = "";
@@ -46,29 +42,16 @@ function renderTasks(filter)
     }
     accordion.insertAdjacentHTML("beforeend", rendererHtml);
 }
-
-"use strict"
-
-const accordion = document.querySelector("#mainAccordion");
-const taskHeader = document.querySelector("#input");
-const taskDescription = document.querySelector("#inputDesc");
-const managerButton = document.querySelector("#button-add");
-//renderTasks("all");
-const iconManager = document.querySelector("#status");
-const author = document.querySelector("#author");
-
-let editingId;
-let undo = ` <i class="fa-solid fa-rotate-left"></i>`
-
-
+// Done.
 function clearInputs()
 {
     taskHeader.value = "";
     taskDescription.value = "";
 }
-
+// All Works.
 function manageTasks()
 {
+   
     if(managerButton.textContent == "Edit")
     {
         let onEditingTask = ToDoS.find(toDo=>toDo.id == editingId);
@@ -77,16 +60,22 @@ function manageTasks()
     }
     else
     {
-        ToDoS.push({"id" : ToDoS.length + 1, "task":taskHeader.value, "completed":"pending", "description":taskDescription.value});
+        
+        if(taskHeader.value.length != 0 && taskDescription.value.length != 0)
+        {
+            ToDoS.push({"id" : ToDoS.length + 1, "task":taskHeader.value, "completed":"pending", "description":taskDescription.value});
+            document.querySelector("#form-controls").innerHTML = "";
+            
+        }
+       
     }
     clearInputs();
     managerButton.textContent = "Add";
-    renderTasks("all");
     localStorage.setItem("ToDoS",JSON.stringify(ToDoS));
+    renderTasks("all");
 }
 
-
-
+// Done.
 function editTask(taskId)
 {
     let editTask;
@@ -106,9 +95,11 @@ function editTask(taskId)
    
 }
 
+// Done.
 function deleteTask(taskId)
 {
     ToDoS.splice(ToDoS.findIndex(i=>i.id == taskId),1);
+    localStorage.setItem("ToDoS",JSON.stringify(ToDoS));
     renderTasks("all");
 }
 
@@ -117,9 +108,9 @@ function finishTask(taskId)
 {
     let task = ToDoS.find(i=>i.id == taskId);
     task.completed == "pending" ? task.completed = "completed" : task.completed = "pending";
+    localStorage.setItem("ToDoS",JSON.stringify(ToDoS));
     renderTasks("all");
 
-    
 }
 
 
@@ -131,7 +122,7 @@ for(let filter of filters.children)
     });
 }
 
-let ToDoS = [];
+
 if(localStorage.getItem("ToDoS") != null)
 {
     ToDoS = JSON.parse(localStorage.getItem("ToDoS"));
