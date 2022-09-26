@@ -39,8 +39,15 @@ using Newtonsoft.Json;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\Views\_ViewImports.cshtml"
+using todoapp.webui.Extensions;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d2bb72ffc472a85b98508501bbc8a3676e9c86e7", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ea61b6b70852f25a6683c7dacf20de876fb4b0fa", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"23bf2b12ab402717629d3f7b907832f4732f0c8d", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<HomePageModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("id", new global::Microsoft.AspNetCore.Html.HtmlString("form-controls"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -114,9 +121,9 @@ using Newtonsoft.Json;
 #line hidden
 #nullable disable
             WriteLiteral("      </p>\r\n      <a href=\"/account/logout\" class=\"btn btn-primary\">Logout</a>\r\n      </div>\r\n    \r\n      ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2bb72ffc472a85b98508501bbc8a3676e9c86e78367", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2bb72ffc472a85b98508501bbc8a3676e9c86e78570", async() => {
                 WriteLiteral("\r\n        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2bb72ffc472a85b98508501bbc8a3676e9c86e78633", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2bb72ffc472a85b98508501bbc8a3676e9c86e78836", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper>();
@@ -260,7 +267,7 @@ WriteAttributeValue("", 2516, task.TaskId, 2516, 14, false);
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                        </button>\r\n                        <div class=\"icons\">\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2bb72ffc472a85b98508501bbc8a3676e9c86e717376", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2bb72ffc472a85b98508501bbc8a3676e9c86e717579", async() => {
                 WriteLiteral("<i class=\"fa-solid fa-pen-to-square fa-sm \"></i>");
             }
             );
@@ -293,7 +300,7 @@ WriteAttributeValue("", 2516, task.TaskId, 2516, 14, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2bb72ffc472a85b98508501bbc8a3676e9c86e719850", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2bb72ffc472a85b98508501bbc8a3676e9c86e720053", async() => {
                 WriteLiteral("<i class=\"fa-solid fa-trash fa-sm\"></i>");
             }
             );
@@ -326,7 +333,7 @@ WriteAttributeValue("", 2516, task.TaskId, 2516, 14, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2bb72ffc472a85b98508501bbc8a3676e9c86e722317", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2bb72ffc472a85b98508501bbc8a3676e9c86e722520", async() => {
                 WriteLiteral("<i");
                 BeginWriteAttribute("class", " class=\'", 3123, "\'", 3199, 1);
 #nullable restore

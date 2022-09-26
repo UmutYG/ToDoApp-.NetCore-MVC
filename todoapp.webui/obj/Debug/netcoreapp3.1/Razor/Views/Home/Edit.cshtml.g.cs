@@ -39,8 +39,15 @@ using Newtonsoft.Json;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.webui\Views\_ViewImports.cshtml"
+using todoapp.webui.Extensions;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"789de2bd4fc2630c42d8a58038eb09a4ba5db434", @"/Views/Home/Edit.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ea61b6b70852f25a6683c7dacf20de876fb4b0fa", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"23bf2b12ab402717629d3f7b907832f4732f0c8d", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Edit : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<EditModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("action", new global::Microsoft.AspNetCore.Html.HtmlString("/home/Edit"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -82,7 +89,7 @@ using Newtonsoft.Json;
   <div class=""container mt-3"">
       <p class=""card-text fs-4"">ToDoApp</p>
       ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "789de2bd4fc2630c42d8a58038eb09a4ba5db4345577", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "789de2bd4fc2630c42d8a58038eb09a4ba5db4345780", async() => {
                 WriteLiteral("\r\n      <input type=\"hidden\" name=\"TaskId\"");
                 BeginWriteAttribute("value", " value=\"", 378, "\"", 408, 1);
 #nullable restore
@@ -159,7 +166,7 @@ WriteAttributeValue("", 786, Model.EditTask.Description, 786, 27, false);
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                        </button>\r\n                        <div class=\"icons\">\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "789de2bd4fc2630c42d8a58038eb09a4ba5db43410101", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "789de2bd4fc2630c42d8a58038eb09a4ba5db43410304", async() => {
                 WriteLiteral("<i class=\"fa-solid fa-pen-to-square fa-sm\"></i>");
             }
             );
@@ -192,7 +199,7 @@ WriteAttributeValue("", 786, Model.EditTask.Description, 786, 27, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "789de2bd4fc2630c42d8a58038eb09a4ba5db43412573", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "789de2bd4fc2630c42d8a58038eb09a4ba5db43412776", async() => {
                 WriteLiteral("<i class=\"fa-solid fa-trash fa-sm\"></i>");
             }
             );

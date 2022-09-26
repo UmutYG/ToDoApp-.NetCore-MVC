@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using todoapp.webui.Extensions;
 using todoapp.webui.Identity;
 using todoapp.webui.Models;
 
@@ -62,12 +63,19 @@ namespace todoapp.webui.Controllers
             var user = await _userManager.FindByNameAsync(model.UserName);
             if(user == null)
             {
-                AccControlMessage("No users found.", "info");
+                TempData.Put("msg", new TempDataModel{
+                        Message = "No user found.",
+                        ClassAtr = "info"
+                    });
+                // AccControlMessage("No user found.", "info");
                 return RedirectToAction("Index", "Home");
             }
             if(!await _userManager.IsEmailConfirmedAsync(user))
             {
-                AccControlMessage("Please confirm your email.", "info");
+                TempData.Put("msg", new TempDataModel{
+                        Message = "Please confirm your email.",
+                        ClassAtr = "info"
+                    });
                 TempData["token"] = user.Token;
                 return RedirectToAction("Index", "Home");
             }
@@ -77,7 +85,11 @@ namespace todoapp.webui.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-            AccControlMessage("Failed to log in.", "info");
+            TempData.Put("msg", new TempDataModel{
+                        Message = "Failed to log in.",
+                        ClassAtr = "info"
+                    });
+            
             return RedirectToAction("Index", "Home");
         }
 
@@ -101,24 +113,24 @@ namespace todoapp.webui.Controllers
                 var result = await _userManager.ConfirmEmailAsync(user, token);
                 if(result.Succeeded)
                 {
-                    AccControlMessage("Your Account Has Been Confirmed", "success");
+                    TempData.Put("msg", new TempDataModel{
+                        Message = "Your Account Has Been Confirmed",
+                        ClassAtr = "success"
+                    });
                     return RedirectToAction("Index", "Home");
                 }
                 
             }
-           AccControlMessage("Failed to confirm.", "danger");
-           return RedirectToAction("Index", "Home");
+            TempData.Put("message", new TempDataModel{
+                    Message = "Failed to confirm.",
+                    ClassAtr = "danger"
+                });
+           
+            return RedirectToAction("Index", "Home");
 
         }
 
-        private void AccControlMessage(string message, string classAttr)
-        {
-            var msg = new TempDataModel {
-                Message = message,
-                ClassAtr = classAttr
-            };
-            TempData["msg"] = JsonConvert.SerializeObject(msg);
-        }
+       
 
        
     }
