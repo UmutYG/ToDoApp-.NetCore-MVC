@@ -55,7 +55,8 @@ namespace todoapp.webui
                 options.Cookie = new CookieBuilder
                 {
                     HttpOnly = true,
-                    Name = ".todoapp.Security.Cookie"
+                    Name = ".todoapp.Security.Cookie",
+                    SameSite = SameSiteMode.Strict
                 };
             });
             // Using Views

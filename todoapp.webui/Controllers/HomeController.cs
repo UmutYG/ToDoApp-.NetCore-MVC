@@ -55,6 +55,7 @@ namespace todoapp.webui.Controllers
             
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async System.Threading.Tasks.Task<IActionResult> AddTask(HomePageModel model)
         {
             if(User.Identity.IsAuthenticated)

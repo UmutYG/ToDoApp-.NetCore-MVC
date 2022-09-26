@@ -14,7 +14,7 @@
       </p>
       <a href="/account/logout" class="btn btn-primary">Logout</a>
       </div>
-     
+    
       <form action="/home/AddTask" method="post" id="submit-form">
         <div asp-validation-summary="All" id="form-controls" class="text-danger"></div>
         <div class="input-group mb-3">
@@ -24,6 +24,8 @@
           <div class="input-group mb-3">
             <input class="form-control" placeholder="Add Description" value="" type="text" data-val="true" data-val-required="Please Fill The Description" id="Description" name="Description">
           </div>
+           @Html.AntiForgeryToken()  @* CSRF Attack Safety*@
+
         </form>
         <ul class="list-group list-group-horizontal mb-3">
           <li class="list-group-item" onclick='@(User.Identity.IsAuthenticated ? "" : "renderTasks('all')")'><a  href="/all">All</a></li>

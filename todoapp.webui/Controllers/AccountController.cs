@@ -9,8 +9,10 @@ using todoapp.webui.Models;
 
 namespace todoapp.webui.Controllers
 {
+    [AutoValidateAntiforgeryToken] // Shortcut
     public class AccountController : Controller
     {
+        
         private UserManager<User> _userManager;
         private SignInManager<User> _signInManager;
 
@@ -20,6 +22,8 @@ namespace todoapp.webui.Controllers
             _signInManager = signInManager;
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> Register(LoginModel model)
         {
             if(!ModelState.IsValid)
@@ -37,6 +41,8 @@ namespace todoapp.webui.Controllers
             return RedirectToAction("Index","Home");
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> Login(LoginModel model)
         {
             if(!ModelState.IsValid)
