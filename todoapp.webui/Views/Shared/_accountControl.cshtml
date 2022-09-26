@@ -5,9 +5,8 @@
 </div> 
 <div class="container d-flex justify-content-center">
   <form action="/account/login" id="form" method="post">
-    <div asp-validation-summary="All"></div>
+    <div class="text-danger" asp-validation-summary="All"></div>
     @if (TempData["msg"]!=null){
-      System.Console.WriteLine("Girdim");
       var message = JsonConvert.DeserializeObject<TempDataModel>(TempData["msg"] as String);
       <div class="alert alert-@message.ClassAtr" role="alert">
         @message.Message
@@ -15,16 +14,16 @@
     }
     @if (TempData["token"] != null){<div class="d-flex align-items-center justify-content-center"><a href='@TempData["token"]' class="">Confirm</a></div>}
     <div class="mb-3" style="width: 300px; ">
-      <label for="exampleInputEmail1" class="form-label">UserName</label>
-      <input name="UserName" class="form-control">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <label class="form-label">Username</label>
+      <input data-val="true" data-val-required="Please Fill The Username" name="UserName" class="form-control">
+      @* <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> *@
     </div>
     <div class="mb-3" style="width: 300px;">
-      <label for="" class="form-label">Password</label>
-      <input name="password" class="form-control">
+      <label class="form-label">Password</label>
+      <input data-val="true" data-val-required="Please Provide a Password" name="password" class="form-control">
     </div>
     <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <input  type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
     <button id="control" type="submit" class="btn btn-primary">Login</button>

@@ -62,6 +62,7 @@ namespace todoapp.webui.Controllers
             var user = await _userManager.FindByNameAsync(model.UserName);
             if(user == null)
             {
+                AccControlMessage("No users found.", "info");
                 return RedirectToAction("Index", "Home");
             }
             if(!await _userManager.IsEmailConfirmedAsync(user))
@@ -76,7 +77,7 @@ namespace todoapp.webui.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-            ModelState.AddModelError("", "Wrong username or password.");
+            AccControlMessage("Failed to log in.", "info");
             return RedirectToAction("Index", "Home");
         }
 
