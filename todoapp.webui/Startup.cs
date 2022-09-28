@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using todoapp.business.Abstract;
@@ -19,10 +20,16 @@ namespace todoapp.webui
 {
     public class Startup
     {
+        private IConfiguration _configuration;
+        public Startup(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public void ConfigureServices(IServiceCollection services)
         {   
             // Identity configures
-            services.AddDbContext<IdentityContext>(options => options.UseSqlite("Data Source = taskDb"));
+            services.AddDbContext<TaskContext>(options => options.UseSqlite(_configuration.GetConnectionString("SqLiteConnection")));
+            services.AddDbContext<IdentityContext>(options => options.UseSqlite(_configuration.GetConnectionString("SqLiteConnection")));
             services.AddIdentity<User,IdentityRole>().AddEntityFrameworkStores<IdentityContext>().AddDefaultTokenProviders();
             services.Configure<IdentityOptions>(options => {
 

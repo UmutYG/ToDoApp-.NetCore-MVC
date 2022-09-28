@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using todoapp.data.Abstract;
 using todoapp.entity;
 
@@ -9,8 +10,12 @@ namespace todoapp.data.Concrete
 {
     public class EfCoreTaskRepository : ITaskRepository
     {
-        private TaskContext context = new TaskContext();
+        protected readonly TaskContext context;
 
+        public EfCoreTaskRepository(TaskContext ctx)
+        {
+            context = ctx;
+        }
         public void Create(Task t)
         {
             context.Tasks.Add(t);
