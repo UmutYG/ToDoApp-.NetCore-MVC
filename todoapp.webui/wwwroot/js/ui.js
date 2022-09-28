@@ -59,3 +59,17 @@ function drawBorder(taskDiv)
     }
     
 }
+
+function showDonation()
+{
+    form.style.display = "none";
+    donateDiv.style.display = "block";
+    alert.textContent = "Your Donation Is Really Appreciated"
+}
+
+function hideDonation()
+{
+    form.style.display = "block";
+    donateDiv.style.display = "None";
+    alert.textContent = "Have an account? Log In."
+}

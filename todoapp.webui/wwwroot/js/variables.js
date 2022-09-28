@@ -8,6 +8,8 @@ const accordion = document.querySelector("#mainAccordion");
 const taskHeader = document.querySelector("#TaskHeader");
 const taskDescription = document.querySelector("#Description");
 const managerButton = document.querySelector("#button-add");
+const donateButton = document.querySelector("#donate");
+const donateDiv = document.querySelector(".donate-div");
 //renderTasks("all");
 const iconManager = document.querySelector("#status");
 const author = document.querySelector("#author");

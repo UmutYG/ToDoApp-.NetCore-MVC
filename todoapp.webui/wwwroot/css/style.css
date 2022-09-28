@@ -61,3 +61,8 @@
         {
             color: red !important;
         }
+
+        .donate-div
+        {
+            display: none;
+        }

@@ -14412,6 +14412,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\Views\\Shared\\_donate.cshtml",
+      "TargetPath": "Views\\Shared\\_donate.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

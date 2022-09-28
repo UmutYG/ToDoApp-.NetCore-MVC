@@ -1,9 +1,9 @@
   <hr>  
 <!-- Pills navs -->
-<div id="alert" class="container alert alert-primary d-flex justify-content-center" style="width: 300px; role="alert">
+<div id="alert" class="container alert alert-primary d-flex justify-content-center" style="width: 300px; "role="alert">
   Have an account? Log In.
 </div> 
-<div class="container d-flex justify-content-center">
+<div class="container d-flex justify-content-center" style="width: 300px;">
   <form action="/account/login" id="form" method="post">
     <div class="text-danger" asp-validation-summary="All"></div>
     @if (TempData["msg"]!=null){
@@ -28,6 +28,9 @@
     </div>
     <button id="control" type="submit" class="btn btn-primary">Login</button>
     <span>Or <a href="#" id="register">Register</a></span>
+    <div>
+      <a onclick="showDonation()" href="#" id="donate">Donate and Support Me!</a></span>
+    </div>
     @Html.AntiForgeryToken()  @* CSRF Attack Safety*@
 
 </form>

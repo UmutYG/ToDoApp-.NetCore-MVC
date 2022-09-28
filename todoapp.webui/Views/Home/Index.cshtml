@@ -72,4 +72,5 @@
 @if (!User.Identity.IsAuthenticated)
 {
   @await Html.PartialAsync("_accountControl")
+  @await Html.PartialAsync("_donate")
 }
