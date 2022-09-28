@@ -19,7 +19,6 @@ namespace todoapp.data.Concrete
         public void Create(Task t)
         {
             context.Tasks.Add(t);
-            context.SaveChanges();
         }
 
         public void Delete(Task t)
@@ -57,7 +56,6 @@ namespace todoapp.data.Concrete
             entity.Description = t.Description;
             entity.TaskHeader = t.TaskHeader;
             entity.isCompleted = t.isCompleted;
-            context.SaveChanges();
           
         }
     }

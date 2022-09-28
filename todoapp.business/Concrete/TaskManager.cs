@@ -9,46 +9,49 @@ namespace todoapp.business.Concrete
 {
     public class TaskManager : ITaskService
     {
-        private ITaskRepository _taskRepository;
+        private IUnitOfWork _unitofwork;
 
-        public TaskManager(ITaskRepository taskRepository)
+        public TaskManager(IUnitOfWork unitofwork)
         {
-            _taskRepository = taskRepository;
+            _unitofwork = unitofwork;
         }
         public void Create(entity.Task t)
         {
-            _taskRepository.Create(t);
+            _unitofwork.Tasks.Create(t);
+            _unitofwork.Save();
         }
 
         public void Delete(entity.Task t)
         {
-            _taskRepository.Delete(t);
+            _unitofwork.Tasks.Delete(t);
+            _unitofwork.Save();
             
         }
 
         public List<entity.Task> GetAll()
         {
-            return _taskRepository.GetAll();
+            return _unitofwork.Tasks.GetAll();
         }
 
         public List<entity.Task> GetAllByPagination(int page, int pageSize,string userId)
         {
-            return _taskRepository.GetAllByPagination(page,pageSize,userId);
+            return _unitofwork.Tasks.GetAllByPagination(page,pageSize,userId);
         }
 
         public entity.Task GetById(int id)
         {
-            return _taskRepository.GetById(id);
+            return _unitofwork.Tasks.GetById(id);
         }
 
         public List<entity.Task> GetByStatus(bool status)
         {
-            return _taskRepository.GetByStatus(status);
+            return _unitofwork.Tasks.GetByStatus(status);
         }
 
         public void Update(entity.Task t)
         {
-            _taskRepository.Update(t);
+            _unitofwork.Tasks.Update(t);
+            _unitofwork.Save();
         }
     }
 }

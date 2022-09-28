@@ -70,7 +70,8 @@ namespace todoapp.webui
             services.AddControllersWithViews();
 
             // Dependency Injections
-            services.AddScoped<ITaskRepository, EfCoreTaskRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            // services.AddScoped<ITaskRepository, EfCoreTaskRepository>();
             services.AddScoped<ITaskService, TaskManager>();
         }
 
