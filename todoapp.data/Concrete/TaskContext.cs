@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using todoapp.data.Configurations;
 using todoapp.entity;
 
 namespace todoapp.data.Concrete
@@ -15,9 +16,21 @@ namespace todoapp.data.Concrete
         public DbSet<Task> Tasks { get; set; }
 
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        // Moved connectionString to appSettings.js
+
+        // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        // {
+           
+        //     optionsBuilder.UseSqlite("Data Source = taskDb");
+        // }
+
+        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source = taskDb");
+            // Fluent Api Configurations.
+            modelBuilder.ApplyConfiguration(new TaskConfiguration());
         }
+
+
     }
 }
