@@ -18,12 +18,12 @@ namespace todoapp.data.Configurations
             // builder.Property(t=>t.DateAdded).HasDefaultValueSql("getdate()"); => mssql
             // builder.Property(t=>t.DateAdded).HasDefaultValueSql("date('now')"); => sqlite
 
-            builder.HasData(
-                new Task(){TaskHeader = "SeededTask1", Description="Task1 Seed",isCompleted=false,UserId="1"},
-                new Task(){TaskHeader = "SeededTask2", Description="Task2 Seed",isCompleted=false,UserId="1"},
-                new Task(){TaskHeader = "SeededTask2", Description="Task2 Seed",isCompleted=false,UserId="1"}
-        
-            );
+            // Moved to extension folder.
+                // builder.HasData(
+                //     new Task(){TaskHeader = "SeededTask1", Description="Task1 Seed",isCompleted=false,UserId="1"},
+                //     new Task(){TaskHeader = "SeededTask2", Description="Task2 Seed",isCompleted=false,UserId="1"},
+                //     new Task(){TaskHeader = "SeededTask2", Description="Task2 Seed",isCompleted=false,UserId="1"}
+                // );
         }
     }
 }

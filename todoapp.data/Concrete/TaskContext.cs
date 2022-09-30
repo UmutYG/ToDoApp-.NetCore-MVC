@@ -17,18 +17,20 @@ namespace todoapp.data.Concrete
 
 
         // Moved connectionString to appSettings.js
-
-        // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        // {
-           
-        //     optionsBuilder.UseSqlite("Data Source = taskDb");
-        // }
+            // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+            // {
+            
+            //     optionsBuilder.UseSqlite("Data Source = taskDb");
+            // }
 
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Fluent Api Configurations.
             modelBuilder.ApplyConfiguration(new TaskConfiguration());
+
+            // Used Extension Method That We Created.
+            modelBuilder.Seed();
         }
 
 
