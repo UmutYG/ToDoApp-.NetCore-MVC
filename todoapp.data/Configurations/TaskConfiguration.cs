@@ -15,8 +15,15 @@ namespace todoapp.data.Configurations
             builder.HasKey(t=>t.TaskId);
             builder.Property(t=>t.TaskHeader).IsRequired().HasMaxLength(100);
 
-            // builder.Property(t=>t.DateAdded).HasDefaultValueSql("getdate()");
+            // builder.Property(t=>t.DateAdded).HasDefaultValueSql("getdate()"); => mssql
+            // builder.Property(t=>t.DateAdded).HasDefaultValueSql("date('now')"); => sqlite
 
+            builder.HasData(
+                new Task(){TaskHeader = "SeededTask1", Description="Task1 Seed",isCompleted=false,UserId="1"},
+                new Task(){TaskHeader = "SeededTask2", Description="Task2 Seed",isCompleted=false,UserId="1"},
+                new Task(){TaskHeader = "SeededTask2", Description="Task2 Seed",isCompleted=false,UserId="1"}
+        
+            );
         }
     }
 }

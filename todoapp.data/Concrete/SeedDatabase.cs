@@ -7,9 +7,10 @@ using todoapp.entity;
 
 namespace todoapp.data.Concrete
 {
+     // No longer serving. Activated seeding with FluentApi.
     public static class SeedDatabase
     {
-        static readonly TaskContext db;
+        //  static readonly TaskContext db;
 
         // public static SeedDatabase(TaskContext ctx)
         // {
@@ -28,13 +29,12 @@ namespace todoapp.data.Concrete
         //     }
         //     db.SaveChanges();
         // }
-        // //Used array for example.
+      
         // private static Task[] tasks = {
         //     new Task(){TaskHeader = "SeededTask1", Description="Task1 Seed",isCompleted=false,UserId="1"},
         //     new Task(){TaskHeader = "SeededTask2", Description="Task2 Seed",isCompleted=false,UserId="1"},
         //     new Task(){TaskHeader = "SeededTask2", Description="Task2 Seed",isCompleted=false,UserId="1"}
         // };
-        // // Used List for example.
        
 
     }
