@@ -30,7 +30,7 @@ namespace todoapp.data.Concrete
             modelBuilder.ApplyConfiguration(new TaskConfiguration());
 
             // Used Extension Method That We Created.
-            modelBuilder.Seed();
+                //modelBuilder.Seed();
         }
 
 
