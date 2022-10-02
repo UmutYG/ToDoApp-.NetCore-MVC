@@ -17,9 +17,9 @@ namespace todoapp.webapi.Controllers
             _taskService = taskService;
         }
         [HttpGet]
-        public IActionResult GetTasks()
+        public async Task<IActionResult> GetTasks()
         {
-            var tasks = _taskService.GetAll();
+            var tasks = await _taskService.GetAll();
             return Ok(tasks);
         }
         [HttpGet("{id}")]

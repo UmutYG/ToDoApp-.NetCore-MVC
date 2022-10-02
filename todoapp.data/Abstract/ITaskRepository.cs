@@ -8,7 +8,7 @@ namespace todoapp.data.Abstract
     public interface ITaskRepository
     {
         Task GetById(int id);
-        List<Task> GetAll();
+        System.Threading.Tasks.Task<List<Task>> GetAll();
         List<Task> GetAllByPagination(int page, int pageSize,string userId);
         List<Task> GetByStatus(bool status);
         void Create(Task t);

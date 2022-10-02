@@ -9,4 +9,3 @@ C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\obj\Debug\netstan
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\obj\Debug\netstandard2.0\todoapp.data.csproj.CopyComplete
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\obj\Debug\netstandard2.0\todoapp.data.dll
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\obj\Debug\netstandard2.0\todoapp.data.pdb
-C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.data\obj\Debug\netstandard2.0\todoapp.data.csproj.CoreCompileInputs.cache

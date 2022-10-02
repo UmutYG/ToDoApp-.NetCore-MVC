@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+
 using Microsoft.EntityFrameworkCore;
 using todoapp.data.Abstract;
 using todoapp.entity;
@@ -28,9 +29,9 @@ namespace todoapp.data.Concrete
         }
 
 
-        public List<Task> GetAll()
+        public async System.Threading.Tasks.Task<List<Task>> GetAll()
         {
-            return context.Tasks.ToList();
+            return await context.Tasks.ToListAsync();
         }
 
         public List<Task> GetAllByPagination(int page, int pageSize, string userId)

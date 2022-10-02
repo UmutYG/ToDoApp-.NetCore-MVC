@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\todoapp.webui.csproj": {}
+    "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\todoapp.webui.csproj": {}
   },
   "projects": {
-    "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.business\\todoapp.business.csproj": {
+    "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.business\\todoapp.business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.business\\todoapp.business.csproj",
+        "projectUniqueName": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.business\\todoapp.business.csproj",
         "projectName": "todoapp.business",
-        "projectPath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.business\\todoapp.business.csproj",
+        "projectPath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.business\\todoapp.business.csproj",
         "packagesPath": "C:\\Users\\umut_\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.business\\obj\\",
+        "outputPath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\umut_\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -25,11 +25,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\todoapp.data.csproj": {
-                "projectPath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\todoapp.data.csproj"
+              "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\todoapp.data.csproj": {
+                "projectPath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\todoapp.data.csproj"
               },
-              "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj": {
-                "projectPath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj"
+              "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj": {
+                "projectPath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj"
               }
             }
           }
@@ -64,14 +64,14 @@
         }
       }
     },
-    "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\todoapp.data.csproj": {
+    "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\todoapp.data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\todoapp.data.csproj",
+        "projectUniqueName": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\todoapp.data.csproj",
         "projectName": "todoapp.data",
-        "projectPath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\todoapp.data.csproj",
+        "projectPath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\todoapp.data.csproj",
         "packagesPath": "C:\\Users\\umut_\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\obj\\",
+        "outputPath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\umut_\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -85,8 +85,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj": {
-                "projectPath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj"
+              "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj": {
+                "projectPath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj"
               }
             }
           }
@@ -131,14 +131,14 @@
         }
       }
     },
-    "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj": {
+    "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj",
+        "projectUniqueName": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj",
         "projectName": "todoapp.entity",
-        "projectPath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj",
+        "projectPath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj",
         "packagesPath": "C:\\Users\\umut_\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\obj\\",
+        "outputPath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\umut_\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -184,14 +184,14 @@
         }
       }
     },
-    "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\todoapp.webui.csproj": {
+    "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\todoapp.webui.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\todoapp.webui.csproj",
+        "projectUniqueName": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\todoapp.webui.csproj",
         "projectName": "todoapp.webui",
-        "projectPath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\todoapp.webui.csproj",
+        "projectPath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\todoapp.webui.csproj",
         "packagesPath": "C:\\Users\\umut_\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\obj\\",
+        "outputPath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.webui\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\umut_\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -205,14 +205,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.business\\todoapp.business.csproj": {
-                "projectPath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.business\\todoapp.business.csproj"
+              "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.business\\todoapp.business.csproj": {
+                "projectPath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.business\\todoapp.business.csproj"
               },
-              "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\todoapp.data.csproj": {
-                "projectPath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\todoapp.data.csproj"
+              "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\todoapp.data.csproj": {
+                "projectPath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.data\\todoapp.data.csproj"
               },
-              "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj": {
-                "projectPath": "c:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj"
+              "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj": {
+                "projectPath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj"
               }
             }
           }

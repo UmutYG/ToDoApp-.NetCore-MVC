@@ -46,7 +46,9 @@ namespace todoapp.webui.Controllers
             }
             return View(new HomePageModel(){
                 PageInfo = new PageInfo(){
-                    TotalPage = (int)Math.Ceiling(((float)_taskService.GetAll().Count() / pageSize)),
+                    // TotalPage = (int)Math.Ceiling(((float) await _taskService.GetAll() / pageSize)),
+                    // Fix this
+                    TotalPage = 1,
                     CurrentPage = currentPage},
                     Tasks = _taskService.GetAllByPagination(currentPage,pageSize,user.Id)
                 });
@@ -89,10 +91,10 @@ namespace todoapp.webui.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Edit(int id,int p)
+        public async System.Threading.Tasks.Task<IActionResult> Edit(int id,int p)
         {
             return View(new EditModel(){
-                Tasks = _taskService.GetAll(),
+                Tasks = await _taskService.GetAll(),
                 EditTask = _taskService.GetById(id)}
                 );
         }
