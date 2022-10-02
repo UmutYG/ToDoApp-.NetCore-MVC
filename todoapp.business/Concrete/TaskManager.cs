@@ -36,6 +36,12 @@ namespace todoapp.business.Concrete
             
         }
 
+        public async System.Threading.Tasks.Task DeleteAsync(Task task)
+        {
+            _unitofwork.Tasks.Delete(task);
+            await _unitofwork.SaveAsync();
+        }
+
         public async System.Threading.Tasks.Task<List<Task>> GetAll()
         {
             return await _unitofwork.Tasks.GetAll();

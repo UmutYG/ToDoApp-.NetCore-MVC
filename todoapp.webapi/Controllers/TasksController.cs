@@ -56,6 +56,19 @@ namespace todoapp.webapi.Controllers
             await _taskService.UpdateAsync(tasktoUpdate, task);
             return NoContent();
         } 
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteTask(int id)
+        {
+            var task =  _taskService.GetById(id);
+            if(task == null)
+            {
+                return NotFound();
+            }
+            await _taskService.DeleteAsync(task);
+            return NoContent();
+
+        }
     }
 
     
