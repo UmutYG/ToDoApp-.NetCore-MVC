@@ -26,6 +26,7 @@ namespace todoapp.webapi
         }
 
         public IConfiguration Configuration { get; }
+        readonly string AllowedOrigins = "_allowedOrigins";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -36,6 +37,19 @@ namespace todoapp.webapi
             services.AddScoped<ITaskService, TaskManager>();
 
             services.AddControllers();
+
+            
+            services.AddCors(options => {
+                options.AddPolicy(
+                    name: AllowedOrigins,
+                    builder => {
+                        builder
+                        .AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                    }
+                );
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +64,7 @@ namespace todoapp.webapi
 
             app.UseRouting();
 
+            app.UseCors(AllowedOrigins);
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
