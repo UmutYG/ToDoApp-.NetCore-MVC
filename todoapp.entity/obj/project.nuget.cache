@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "7sU+YPmLL47y7trcu4IFyc0kBDvhiFx/iYihDL0d5Xy+fIbpKaRmr2BAEF9pCkMytoCsZpjUXEj6Jz3zHnOM3w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\umut_\\Desktop\\GitHubProjects\\ToDoApp-MVC\\todoapp.entity\\todoapp.entity.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\umut_\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\umut_\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

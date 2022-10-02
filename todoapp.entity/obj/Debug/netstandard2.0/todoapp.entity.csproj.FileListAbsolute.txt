@@ -6,3 +6,4 @@ C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.entity\obj\Debug\netst
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.entity\obj\Debug\netstandard2.0\todoapp.entity.AssemblyInfo.cs
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.entity\obj\Debug\netstandard2.0\todoapp.entity.dll
 C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.entity\obj\Debug\netstandard2.0\todoapp.entity.pdb
+C:\Users\umut_\Desktop\GitHubProjects\ToDoApp-MVC\todoapp.entity\obj\Debug\netstandard2.0\todoapp.entity.csproj.CoreCompileInputs.cache
