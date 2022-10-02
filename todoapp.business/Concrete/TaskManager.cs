@@ -22,6 +22,13 @@ namespace todoapp.business.Concrete
             _unitofwork.Save();
         }
 
+        public async System.Threading.Tasks.Task<Task> CreateAsync(Task t)
+        {
+            await _unitofwork.Tasks.CreateAsync(t);
+            await _unitofwork.SaveAsync();
+            return t;
+        }
+
         public void Delete(entity.Task t)
         {
             _unitofwork.Tasks.Delete(t);

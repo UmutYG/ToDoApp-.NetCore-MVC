@@ -12,6 +12,7 @@ namespace todoapp.data.Abstract
         List<Task> GetAllByPagination(int page, int pageSize,string userId);
         List<Task> GetByStatus(bool status);
         void Create(Task t);
+        System.Threading.Tasks.Task CreateAsync(Task t);
         void Update(Task t);
         void Delete(Task t);
     }

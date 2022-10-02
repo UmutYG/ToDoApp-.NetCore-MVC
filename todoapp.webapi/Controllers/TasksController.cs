@@ -32,6 +32,13 @@ namespace todoapp.webapi.Controllers
             }
             return Ok(task); // 200
         }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateTask(todoapp.entity.Task task)
+        {
+            await _taskService.CreateAsync(task);
+            return CreatedAtAction(nameof(GetTask),new{id = task.TaskId}, task);
+        }
     }
 
     

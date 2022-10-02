@@ -22,6 +22,11 @@ namespace todoapp.data.Concrete
             context.Tasks.Add(t);
         }
 
+        public async System.Threading.Tasks.Task CreateAsync(Task t)
+        {
+            await context.Tasks.AddAsync(t);
+        }
+
         public void Delete(Task t)
         {
             context.Tasks.Remove(t);

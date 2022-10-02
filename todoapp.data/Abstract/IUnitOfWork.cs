@@ -9,5 +9,6 @@ namespace todoapp.data.Abstract
     {
         ITaskRepository Tasks { get; }
         void Save();
+        Task<int> SaveAsync();
     }
 }
