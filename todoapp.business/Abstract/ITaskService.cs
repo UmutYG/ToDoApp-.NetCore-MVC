@@ -16,6 +16,7 @@ namespace todoapp.business.Abstract
         void Create(Task t);
         System.Threading.Tasks.Task<Task> CreateAsync(Task t);
         void Update(Task t);
+        System.Threading.Tasks.Task UpdateAsync(Task taskToUpdate, Task task);
         void Delete(Task t);
     }
 }

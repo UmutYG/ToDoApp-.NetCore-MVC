@@ -61,5 +61,15 @@ namespace todoapp.business.Concrete
             _unitofwork.Tasks.Update(t);
             _unitofwork.Save();
         }
+
+        public async System.Threading.Tasks.Task UpdateAsync(Task taskToUpdate, Task task)
+        {
+            taskToUpdate.TaskHeader = task.TaskHeader;
+            taskToUpdate.Description = task.Description;
+            taskToUpdate.isCompleted = task.isCompleted;
+
+            await _unitofwork.SaveAsync();
+          
+        }
     }
 }
