@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using todoapp.business.Abstract;
+using todoapp.webapi.DTO;
 
 namespace todoapp.webapi.Controllers
 {
@@ -20,7 +21,16 @@ namespace todoapp.webapi.Controllers
         public async Task<IActionResult> GetTasks()
         {
             var tasks = await _taskService.GetAll();
-            return Ok(tasks);
+            var tasksDTO = new List<TaskDTO>();
+            foreach (var task in tasks)
+            {
+                tasksDTO.Add(new TaskDTO{
+                    TaskHeader = task.TaskHeader,
+                    Description = task.Description,
+                    isCompleted = task.isCompleted
+                });
+            }
+            return Ok(tasksDTO);
         }
         [HttpGet("{id}")]
         public IActionResult GetTask(int id)
@@ -30,7 +40,11 @@ namespace todoapp.webapi.Controllers
             {
                 return NotFound(); // 404
             }
-            return Ok(task); // 200
+            return Ok(new TaskDTO{
+                    TaskHeader = task.TaskHeader,
+                    Description = task.Description,
+                    isCompleted = task.isCompleted
+                }); // 200
         }
 
         [HttpPost]
@@ -68,6 +82,15 @@ namespace todoapp.webapi.Controllers
             await _taskService.DeleteAsync(task);
             return NoContent();
 
+        }
+
+        private static TaskDTO TaskToDTO(todoapp.entity.Task t)
+        {
+            return new TaskDTO{
+                TaskHeader = t.TaskHeader,
+                Description = t.Description,
+                isCompleted = t.isCompleted
+            };
         }
     }
 
